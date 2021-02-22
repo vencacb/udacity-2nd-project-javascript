@@ -1,0 +1,15 @@
+                  const navMenu = document.querySelectorAll("page__header");
+const navList = document.getElementById("navbar__list");
+
+const menuItems = ["Section 1", "Section 2", "Section 3", "Section 4"];
+
+menuItems.forEach(myFunction);
+
+function myFunction(menuItem,i) {
+    const elA = document.createElement("a");
+    elA.innerText = menuItem;
+    elA.classList.add("menu__link");
+    elA.setAttribute("id", `section-${i + 1}`);
+    elA.href = `#section${i + 1}`;
+    navList.appendChild(elA);
+}
